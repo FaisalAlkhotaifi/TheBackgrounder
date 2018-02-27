@@ -58,9 +58,9 @@ class AudioViewController: UIViewController {
       if UIApplication.shared.applicationState == .active {
         strongSelf.timeLabel.text = timeString
       } else {
-        //print("Background: \(timeString)")
-        self?.player.pause()
-        self?.playButton.isSelected = false
+        //print("Background: \(timeString)") --> to keep playing audio in background
+        self?.player.pause() //to pause audio in background state
+        self?.playButton.isSelected = false //to set play button's "isSelected" to false in background state
       }
     }
   }
